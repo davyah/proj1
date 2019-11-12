@@ -1,22 +1,110 @@
 <!doctype html>
-<html lang="he" dir = rtl>
+<html lang="he" dir = ltr>
 <head>
-    <!-- Required meta tags -->
+    <title>landing page</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<img src="http://cs.hac.ac.il/design/hadassah-logo.png">
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<div class="container">
+    <div class="row">
+        <h1> <img src="http://cs.hac.ac.il/design/hadassah-logo.png"> hadassah college</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-5 col-lg-6 border" id = "mycourse">
+            <table class="table table-sm">
+               <div>
+                   <tbody>
+                   <tr>
+                       <th scope="row">course:</th>
+                       <td>תכנות אינטרנט</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">year:</th>
+                       <td>3</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">semester:</th>
+                       <td>A</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">time:</th>
+                       <td>wednesday 11:30-15:00</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">location:</th>
+                       <td>class 352</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">course's website:</th>
+                       <td>
+                           <a class="btn btn-success" href="https://mowgli.hac.ac.il/course/view.php?id=12532" target="_blank">click here</a>
+                       </td>
+                   </tr>
+                   </tbody>
+               </div>
+            </table>
+        </div>
+        <div class="card" style="width: 18rem; margin: 0px 10px">
+            <div class="card" style="width: 18rem;" >
+                <img src="profile.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <table class="table table-sm">
+                        <div>
+                            <tbody>
+                            <tr>
+                                <th scope="row"> name:</th>
+                                <td> david yahel</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"> E-mail:</th>
+                                <td> dyahel1996@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td><button onclick="details()" id="deButton">details</button></td>
+                            </tr>
+                            </tbody>
+                        </div>
+                    </table>
+                    <div style="display: none" id="myhobbies">
+                        <h5>my hobbies are:</h5>
+                        <ul>
+                            <li>programing</li>
+                            <li>play bass</li>
+                            <li>chilling out</li>
+                        </ul>
+                        <div>
+                            <button onclick="hide()">hide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function details() {
+        var x = document.getElementById("myhobbies");
+        var y = document.getElementById("mycourse");
+        var z = document.getElementById("deButton");
+        y.style.display = "none";
+        x.style.display = "block";
+        z.style.display = "none";
+    }
+</script>
+<script>
+    function hide() {
+        var x = document.getElementById("myhobbies");
+        var y = document.getElementById("mycourse");
+        var z = document.getElementById("deButton");
+        y.style.display = "block";
+        x.style.display = "none";
+        z.style.display = "block";
+    }
+</script>
 </body>
 </html>
